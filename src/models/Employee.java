@@ -30,7 +30,6 @@ import javax.persistence.Table;
             query = "SELECT e FROM Employee AS e WHERE e.delete_flag = 0 AND e.code = :code AND e.password = :pass"
             )
 })
-
 @Entity
 public class Employee {
     @Id
@@ -66,6 +65,7 @@ public class Employee {
     public void setId(Integer id) {
         this.id = id;
     }
+
     public String getCode() {
         return code;
     }
@@ -121,5 +121,4 @@ public class Employee {
     public void setDelete_flag(Integer delete_flag) {
         this.delete_flag = delete_flag;
     }
-
 }
